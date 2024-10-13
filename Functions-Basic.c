@@ -1,3 +1,5 @@
+// ****** Functions *******
+
 #include <stdio.h>
 
 void ex1() 
@@ -69,6 +71,43 @@ int main()
 	return 0;
 }
 //----------------------------------------------------------------------------------------------------------------
+
+// ****** solution to the cells problem *******
+
+#include <stdio.h>
+
+
+int numCells(float w, float h) {
+	// Each cell is 0.6 x 0.6 m
+	
+	int wCells = w / 0.6f;
+	int hCells = h / 0.6f;
+
+	int numCells = wCells * hCells;
+	
+	return numCells;
+}
+
+
+int main() 
+{
+	
+	float width;
+	printf("Introduce the width of the room (floating point number):\n");
+	scanf_s("%f", &width);
+
+	float height;
+	printf("Introduce the height of the room (floating point number):\n");
+	scanf_s("%f", &height);
+
+	printf("%d\n", numCells(width, height));
+	
+
+	return 0;
+}
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 int hmw6() {
 
 	int a = 1, b = 3;
