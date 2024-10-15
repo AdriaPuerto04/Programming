@@ -59,3 +59,46 @@ int main()
 
 }
 
+
+//----------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+
+void fizzBuzz()
+{
+    for (int i = 1; i < 100; ++i)
+    {
+        if (i % 15 == 0) {
+            printf("FizzBuzz");
+        }
+        else if (i % 5 == 0) {
+            printf("Buzz");
+        }
+        else if (i % 3 == 0) {
+            printf("Fizz");
+        }
+        else {
+            printf("%d", i);
+        }
+
+        // Print the commas
+        if (i != 99) {
+            printf(", ");
+        }
+        else {
+            printf("\n");
+        }
+    }
+}
+
+int main()
+{
+   
+    printf("\n-- Fizz Buzz --\n");
+    fizzBuzz();
+
+    return 0;
+}
