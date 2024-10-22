@@ -7,12 +7,14 @@
 #include <stdio.h>
 
 
-void Calculator(int hours, int min, int sec) {
-	
+int Calculator(int hours, int min, int sec) {
+
 	int htosec = hours * 3600.0f;
 	int mtosec = min * 60.0f;
 
 	int sectotal = htosec + mtosec + sec;
+	return sectotal;
+
 	printf("Seconds in %i hours, %i minutes and %i seconds are: %i.", hours, min, sec, sectotal);
 
 
@@ -21,7 +23,7 @@ void Calculator(int hours, int min, int sec) {
 
 
 
-int main() 
+int main()
 {
 
 	int hours, min, sec;
@@ -31,10 +33,16 @@ int main()
 
 	Calculator(hours, min, sec);
 
+	int res = Calculator(hours, min, sec);
+
+	printf("Secs in %d : %d : %d are %d\n", hours, min, sec, res);
 
 	return 0;
 }
 
+//----------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------------
 
 //2
 /*Implement a program that :
@@ -49,7 +57,6 @@ void absValue(float num) {
 	
 	if (num < 0) {
 
-
 		printf("%g", num * -1.0f);
 
 	}
@@ -58,9 +65,6 @@ void absValue(float num) {
 		printf("The number is already in an absolute value.");
 
 	}
-
-
-
 }
 
 
