@@ -129,3 +129,188 @@ int main() {
 	
 
 }
+
+
+//-------------------------💀 Triangles 💀----------------------------------------------------💀 Triangles 💀--------------------------------------------------------💀 Triangles 💀---------------------------------------
+
+void ex9() {
+	/* 9. Write a program in C to display a pattern like a right angle triangle using an asterisk.
+
+		The pattern like :
+
+		*
+		**
+		***
+		**** */
+
+
+	int numrows;
+	printf("enter the number of rows: \n");
+	scanf_s("%d", &numrows);
+
+
+	for (int count = 1; count <= numrows; count++) {
+		for (int val = 1; val <= count; val++) {
+
+			printf("*");
+			
+		}
+		printf("\n");
+	}
+
+}
+
+void ex10() {
+
+	/*10. Write a C program to display a pattern like a right angle triangle with a number.
+
+		The pattern like :
+
+		1
+		12
+		123
+		1234 */
+
+
+	int numrows;
+
+
+	printf("enter the number of rows: \n");
+	scanf_s("%d", &numrows);
+
+	for (int count = 1; count <= numrows; count++) {
+
+		for (int count2 = 1; count2 <= count; count2++) {
+
+			printf("%d", count2);
+
+		}
+
+		printf("\n");
+	}
+
+
+
+}
+
+void ex11() {
+
+
+	/* 11. Write a program in C to make such a pattern like a right angle triangle with a number which will repeat a number in a row.
+
+		The pattern like :
+
+		1
+		22
+		333
+		4444 */
+
+
+	int numrows;
+
+
+	printf("enter the number of rows: \n");
+	scanf_s("%d", &numrows);
+
+	for (int count = 1; count <= numrows; count++) {
+
+		for (int count2 = 1; count2 <= count; count2++) {
+
+			printf("%d", count);
+
+		}
+
+		printf("\n");
+	}
+
+
+
+}
+
+void ex12() {
+
+	/* 12. Write a program in C to make such a pattern like a right angle triangle with the number increased by 1.
+
+		The pattern like :
+
+		1
+		2 3
+		4 5 6
+		7 8 9 10 */
+
+	int numrows;
+	int numdis = 0;
+
+	printf("enter the number of rows: \n");
+	scanf_s("%d", &numrows);
+
+	for (int count = 1; count <= numrows; count++) {
+
+		for (int count2 = 1; count2 <= count; count2++) {
+
+			numdis += 1;
+			printf("%d", numdis);
+			
+		}
+		printf("\n");
+
+	}
+	
+
+
+}
+
+void examexample1() {
+
+	/*triangle 5 rows:
+
+		1
+		01
+		101
+		0101
+		10101
+	*/
+
+	int numrows, a, b;
+	
+	printf("enter the number of rows: \n");
+	scanf_s("%d", &numrows);
+
+	for (int count1 = 1; count1 <= numrows; count1++) {
+
+		if (count1 % 2 == 0) {
+
+			a = 1;
+			b = 0;
+		}
+		else {
+			b = 1;
+			a = 0;
+		}
+
+
+		for (int count2 = 1; count2 <= count1; count2++) {
+
+			if (count2 % 2 == 0) {
+				printf("%d", a);
+			}
+			else {
+				printf("%d", b);
+			}
+		}
+
+		
+		printf("\n");
+
+	}
+}
+
+
+
+int main() {
+
+
+	examexample1();
+	
+	return 0;
+}
